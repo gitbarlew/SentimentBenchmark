@@ -7,8 +7,8 @@ import time
 import openpyxl
 
 nltk.download('vader_lexicon')
-client = OpenAI(api_key='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',
-                organization='org-ivlSYbhARGlcCSqdIhn46w61', )
+client = OpenAI(api_key='put_your_openAI_API_Key_here',
+                organization='configure_organization_if_applicable', )
 
 
 def analyze_sentiment_nltk(text):
