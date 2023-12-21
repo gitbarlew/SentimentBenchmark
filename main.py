@@ -24,7 +24,7 @@ def analyze_sentiment_nltk(text):
     """
     sia = SentimentIntensityAnalyzer()
     score = sia.polarity_scores(text)['compound']
-    return 'positive' if score > 0.1 else 'negative' if score < -0.1 else 'neutral'
+    return 'Positive' if score > 0.1 else 'Negative' if score < -0.1 else 'Neutral'
 
 
 def analyze_sentiment_textblob(text):
@@ -32,7 +32,7 @@ def analyze_sentiment_textblob(text):
     Analyze sentiment using TextBlob.
     """
     score = TextBlob(text).sentiment.polarity
-    return 'positive' if score > 0.1 else 'negative' if score < -0.1 else 'neutral'
+    return 'Positive' if score > 0.1 else 'Negative' if score < -0.1 else 'Neutral'
 
 
 def analyze_sentiment_openai(model, text, temperature=1.0, max_tokens=100, top_p=1.0):
